@@ -18,17 +18,18 @@ html {
 }
 
 main {
-    margin-top: 35vh;
+    margin-top: 10vh;
     background-color: #e4e4e4;
     border-radius: 30px;
     width: 400px;
     height:400px;
 }
 
-button, input {
+button, input, select {
     height: 30px;
     width: 200px;
     border-radius: 5px;
+    border: solid gray 2px;
 }
 
 

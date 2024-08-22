@@ -5,21 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de jugadores</title>
     <link rel="stylesheet" href="style.css">
-    <script defer src="script.js"></script>
+    <script defer src="index.js"></script>
 </head>
 <body>
   <main>
     <section class="listaDeJugadores">
       <h1>Lista de jugadores</h1>
       <form id="formulario">
-        <input type="text" id="nombre" placeholder="Nombre">
+        <input type="text" id="nombre" placeholder="Nombre" required>
         <input type="number" id="numero" placeholder="Numero" required>
-        <input type="text" id="posicion" placeholder="posicion" required>
-        <button id="submit">Agregar a la lista</button>
+        <select id="posicion" required>
+          <option value="" disabled selected>Seleccionar posición</option>
+          <option value="Delantero">Delantero</option>
+          <option value="Defensor">Defensor</option>
+          <option value="Arquero">Arquero</option>
+          <option value="Volante">Volante</option>
+        </select>
+        <button type="button" id="submit">Agregar a la lista</button>
       </form>
-        <button id="borrar">Borrar la lista</button>
-      <ul id="lista-jugadores"></ul>
+      <button id="borrar">Borrar la lista</button>
+      <p id="mensaje"></p>
+    
     </section>
+   
   </main>
+  <ul id="listaJugadores"></ul>
 </body>
 </html>
