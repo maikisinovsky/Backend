@@ -1,13 +1,13 @@
 let listaJugadores = [];
-let cantidadJugadores = 0;
 let botonSubmit = document.getElementById('submit');
 let botonBorrar = document.getElementById('borrar');
 let botonMostrar = document.getElementById('mostrar');
+const mensaje = document.getElementById("mensaje");
 
 document.getElementById('formulario').addEventListener('submit', function(event) {
     event.preventDefault(); 
 
-    cantidadJugadores += 1;
+
     const nombre = document.getElementById('nombre').value;
     const numero = document.getElementById('numero').value;
     const posicion = document.getElementById('posicion').value;
@@ -25,8 +25,7 @@ document.getElementById('formulario').addEventListener('submit', function(event)
         ul.appendChild(li);
     });
 
-    if (cantidadJugadores >= 2) {
-        const mensaje = document.getElementById("mensaje");
+    if (listaJugadores.length >= 26) {
         botonSubmit.disabled = true;
         mensaje.innerHTML ="El máximo de jugadores ha sido alcanzado"
     }
@@ -34,7 +33,6 @@ document.getElementById('formulario').addEventListener('submit', function(event)
 
 botonBorrar.addEventListener('click', function() {
     listaJugadores = [];
-    cantidadJugadores = 0;
     const ul = document.getElementById('listaJugadores');
     ul.innerHTML = "";
     mensaje.innerHTML ="";
