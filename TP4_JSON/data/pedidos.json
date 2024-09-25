@@ -1,0 +1,20 @@
+[
+  {
+    "cliente": "Mai",
+    "producto": "1/4 kilo",
+    "sabores": [
+      "Marroc",
+      "Flan"
+    ],
+    "precio": 100
+  },
+  {
+    "cliente": "Mai",
+    "producto": "1/4 kilo",
+    "sabores": [
+      "Mousse de Maracuyá",
+      "Sambayón"
+    ],
+    "precio": 100
+  }
+]

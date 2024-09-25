@@ -1,4 +1,4 @@
-import { generarEspacio } from "./busqueda";
+import { generarEspacio } from "./busqueda.js";
 
 var encontrado = false;
 var lugar = -1;
@@ -8,12 +8,15 @@ do {
 
     console.log(gen)
 
-    for (let i = 0; i < gen.length; i++) 
+    for (let i = 0; i < gen.length; i++)  {
         if (gen[i] === "Wally") {
             lugar = i;
             console.log("Wally está en la posición " + lugar);
             encontrado = true; 
+            break; 
         }
     
+    }
+        
 
 } while (encontrado == false);
